@@ -52,6 +52,7 @@ namespace Reordarchy
 
                 if (e.keyCode == KeyCode.LeftArrow) { Reordering.Unparent(); }
                 if (e.keyCode == KeyCode.RightArrow) { Reordering.Parent(); }
+                if (e.keyCode == KeyCode.Alpha0) { Reordering.ZeroOut(Reordering.GetTopSelected()); }
             }
         }
 

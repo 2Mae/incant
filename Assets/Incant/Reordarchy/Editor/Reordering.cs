@@ -177,6 +177,17 @@ namespace Reordarchy
             }
             return null;
         }
+
+        public static void ZeroOut(Transform[] transforms)
+        {
+            Undo.RecordObjects(transforms, "center");
+            foreach (var transform in transforms)
+            {
+                transform.localPosition = Vector3.zero;
+                transform.localRotation = Quaternion.identity;
+                transform.localScale = Vector3.one;
+            }
+        }
         private static Transform GetSiblingAboveRoot(Transform target)
         {
             Debug.Assert(target.parent == null);
