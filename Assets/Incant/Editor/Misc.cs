@@ -21,4 +21,16 @@ public static class Misc
         var method = type.GetMethod("Clear");
         method.Invoke(new object(), null);
     }
+
+    [MenuItem("Incant/Save prefab of selected gameObject")]
+    public static void TestTestTest()
+    {
+        if (Selection.activeGameObject == null) { return; }
+        string path = EditorUtility.SaveFilePanel("Save prefab", "", $"{Selection.activeGameObject.name}", "prefab");
+        if (path == "") { return; }
+        path = $"Assets/{path.Remove(0, Application.dataPath.Length + 1)}";
+        var prefab = PrefabUtility.SaveAsPrefabAsset(Selection.activeGameObject, path, out bool success);
+    }
+
+
 }
