@@ -6,5 +6,6 @@ Install in package manager from git URL:
 https://github.com/Toriously/incant.git?path=/Assets/Incant
 
 Or include in manifest.json:
-
-```"com.toriously.incant": "https://github.com/Toriously/incant.git?path=/Assets/Incant",```
+```json
+"com.toriously.incant": "https://github.com/Toriously/incant.git?path=/Assets/Incant",
+```
