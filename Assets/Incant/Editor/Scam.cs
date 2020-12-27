@@ -20,13 +20,14 @@ namespace Incant
         [MenuItem(sub + "Right view")] static void ViewRight() => Rotate(Views.Right);
         [MenuItem(sub + "Front view")] static void ViewFront() => Rotate(Views.Front);
         [MenuItem(sub + "Back view")] static void ViewBack() => Rotate(Views.Back);
-        [MenuItem(sub + "Orthographic")] static void ToggleOrtho() => view.orthographic = !view.orthographic;
         [MenuItem(sub + "Turn left")] static void RotateLeft() => RotateEuler(0, turnIncrement, 0);
         [MenuItem(sub + "Turn right")] static void RotateRight() => RotateEuler(0, -turnIncrement, 0);
         [MenuItem(sub + "Tilt down")] static void RotateDown() => Tilt(-90, turnIncrement);
         [MenuItem(sub + "Tilt up")] static void RotateUp() => Tilt(90, turnIncrement);
         [MenuItem(sub + "Zoom out")] static void ZoomOut() => Zoom(2);
         [MenuItem(sub + "Zoom In")] static void ZoomIn() => Zoom(0.5f);
+        [MenuItem(sub + "Orthographic")] static void ToggleOrtho() => view.orthographic = !view.orthographic;
+        [MenuItem(sub + "2D mode")] static void Toggle2D() => view.in2DMode = !view.in2DMode;
         #endregion
 
         public static class Views
