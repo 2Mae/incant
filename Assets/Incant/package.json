@@ -1,6 +1,6 @@
 {
   "name": "com.toriously.incant",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "displayName": "Incant",
   "description": "My Unity editor tools",
   "unity": "2019.1",
